@@ -54,7 +54,7 @@ path.logo__icon-text {
 
 @media (min-width: 768px) {
     .logo__icon {
-        height: 5.6rem;
+        height: 5.1rem;
     }
 }
 
@@ -103,6 +103,7 @@ path.logo__icon-text {
     text-transform: uppercase;
     display: flex;
     flex-wrap: wrap;
+    letter-spacing: .04em;
 }
 
 .slogan__title {
@@ -123,7 +124,7 @@ path.logo__icon-text {
     }
 
     .slogan__subtitle {
-        margin-top: 2rem;
+        margin-top: 1.2rem;
         margin-left: 4rem;
     }
 }
@@ -135,7 +136,7 @@ path.logo__icon-text {
     }
 
     .slogan__subtitle {
-        margin-top: 1rem;
+        margin-top: -1rem;
         margin-left: 10.8rem;
     }
 }
@@ -148,6 +149,7 @@ path.logo__icon-text {
     .slogan__subtitle {
         width: 100%;
         text-align: right;
+        margin-top: -3.1rem;
     }
 }
 
@@ -167,11 +169,13 @@ path.logo__icon-text {
 .app-button {
     background-color: #5e42b0;
     color: #ffffff;
-    display: flex;
-    align-items: center;
     box-sizing: border-box;
     text-decoration: none;
     text-transform: uppercase;
+}
+.app-button__wrapper{
+    display: flex;
+    align-items: center;
 }
 
 .app-button__app-type {
@@ -183,9 +187,9 @@ path.logo__icon-text {
     .app-button {
         width: 100%;
         max-width: 280px;
-        padding-top: .8rem;
-        padding-bottom: .8rem;
-        padding-left: 8.4rem;
+        padding-top: .6rem;
+        padding-bottom: .6rem;
+        padding-left: 8rem;
         border-radius: 1.8rem;
         font-size: .8rem;
     }
@@ -204,18 +208,21 @@ path.logo__icon-text {
 @media (min-width: 768px) {
     .app-button {
         font-size: 1.6rem;
-        padding: 1.6rem 4.2rem;
+        padding: 1.6rem 5rem 1.6rem 3.8rem;
         border-radius: 38px;
     }
 
-    .app-button__app-type {
-        min-width: 15.5rem;
+    .app-button__wrapper{
+        min-width: 22.5rem;
+        justify-content: center;
     }
-
     .app-button__icon-wrapper {
-        height: 4.2rem;
-        width: 4.2rem;
-        margin-right: 2.6rem;
+        height: 4.8rem;
+        width: 4.8rem;
+        margin-right: 2.2rem;
+    }
+    .app-button__icon-wrapper--android{
+        margin-left: -1.8rem;
     }
 }
 
@@ -267,12 +274,12 @@ path.logo__icon-text {
     }
 
     .header__logo {
-        margin-top: 2rem;
-        margin-bottom: 13rem;
+        margin-top: 3.3rem;
+        margin-bottom: 12.5rem;
     }
 
     .header__slogan {
-        margin-bottom: 9rem;
+        margin-bottom: 7.6rem;
     }
 
     .header__app-buttons {
@@ -286,12 +293,12 @@ path.logo__icon-text {
     }
 
     .header__logo {
-        margin-top: 3rem;
-        margin-bottom: 18rem;
+        margin-top: 4rem;
+        margin-bottom: 16rem;
     }
 
     .header__slogan {
-        margin-bottom: 21.5rem;
+        margin-bottom: 28.5rem;
     }
 
     .header__app-buttons {
@@ -305,12 +312,12 @@ path.logo__icon-text {
     }
 
     .header__logo {
-        margin-top: 4.2rem;
-        margin-bottom: 29.4rem;
+        margin-top: 4.5rem;
+        margin-bottom: 26.4rem;
     }
 
     .header__slogan {
-        margin-bottom: 17.8rem;
+        margin-bottom: 19.6rem;
     }
 
     .header__app-buttons {
