@@ -29,47 +29,33 @@ html {
 body {
     margin: 0;
     font-family: 'Open Sans', Arial, sans-serif;
+    font-size: 1.6rem;
+}
+
+p {
+    margin-top: 0;
 }
 
 /* LOGO */
 
-.logo {
-
-}
-
-.logo__icon path {
-    fill: none;
-    stroke: #fff;
-}
-
-path.logo__icon-text {
+.icon path {
     fill: #fff;
 }
 
 @media (max-width: 767px) {
-    .logo__icon {
+    .header-logo .icon {
         height: 3.6rem;
     }
 }
 
 @media (min-width: 768px) {
-    .logo__icon {
+    .header-logo .icon {
         height: 5.1rem;
     }
 }
 
 .container {
     box-sizing: border-box;
-}
-
-.container--flex {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.container--relative {
-    position: relative;
 }
 
 @media (max-width: 767px) {
@@ -97,56 +83,51 @@ path.logo__icon-text {
 }
 
 /* slogan */
-.slogan {
+.header-slogan {
     color: #ffffff;
     font-weight: bold;
     text-transform: uppercase;
-    display: flex;
-    flex-wrap: wrap;
     letter-spacing: .04em;
 }
 
-.slogan__title {
-
-}
-
-.slogan__subtitle {
-
+.header-slogan .title,
+.header-slogan .subtitle {
+    display: block;
 }
 
 @media (max-width: 767px) {
-    .slogan {
+    .header-slogan {
         font-size: 2.8rem;
+        margin-bottom: 8.3rem;
     }
 
-    .slogan__title {
-        display: block;
-    }
-
-    .slogan__subtitle {
+    .header-slogan .subtitle {
         margin-top: 1.2rem;
         margin-left: 4rem;
+        line-height: 1.2em;
     }
 }
 
 @media (min-width: 768px) and (max-width: 1279px) {
-    .slogan {
+    .header-slogan {
         font-size: 6.4rem;
         max-width: 60rem;
+        margin-bottom: 28.5rem;
     }
 
-    .slogan__subtitle {
+    .header-slogan .subtitle {
         margin-top: -1rem;
         margin-left: 10.8rem;
     }
 }
 
 @media (min-width: 1280px) {
-    .slogan {
+    .header-slogan {
         font-size: 9rem;
+        margin-bottom: 19.6rem;
     }
 
-    .slogan__subtitle {
+    .header-slogan .subtitle {
         width: 100%;
         text-align: right;
         margin-top: -3.1rem;
@@ -155,30 +136,17 @@ path.logo__icon-text {
 
 /* APP BUTTONS */
 
-.app-buttons {
-    display: flex;
-    justify-content: center;
-}
-
-@media (max-width: 767px) {
-    .app-buttons {
-        flex-wrap: wrap;
-    }
-}
-
 .app-button {
     background-color: #5e42b0;
     color: #ffffff;
     box-sizing: border-box;
     text-decoration: none;
     text-transform: uppercase;
-}
-.app-button__wrapper{
     display: flex;
     align-items: center;
 }
 
-.app-button__app-type {
+.app-button .type {
     display: block;
     font-weight: bold;
 }
@@ -198,9 +166,8 @@ path.logo__icon-text {
         margin-top: 1.4rem;
     }
 
-    .app-button__icon-wrapper {
+    .app-button .icon {
         height: 2.4rem;
-        width: 2.6rem;
         margin-right: .6rem;
     }
 }
@@ -210,18 +177,16 @@ path.logo__icon-text {
         font-size: 1.6rem;
         padding: 1.6rem 5rem 1.6rem 3.8rem;
         border-radius: 38px;
-    }
-
-    .app-button__wrapper{
-        min-width: 22.5rem;
+        min-width: 31.4rem;
         justify-content: center;
     }
-    .app-button__icon-wrapper {
+
+    .app-button .icon {
         height: 4.8rem;
-        width: 4.8rem;
         margin-right: 2.2rem;
     }
-    .app-button__icon-wrapper--android{
+
+    .icon.android-icon {
         margin-left: -1.8rem;
     }
 }
@@ -236,14 +201,6 @@ path.logo__icon-text {
     .app-button:nth-child(2n) {
         margin-left: 5.2rem;
     }
-}
-
-.app-button__icon {
-    height: 100%;
-}
-
-.app-button__icon path {
-    fill: #ffffff;
 }
 
 /* HEADER */
@@ -273,17 +230,8 @@ path.logo__icon-text {
         background-image: url("../images/football_767.jpg");
     }
 
-    .header__logo {
-        margin-top: 3.3rem;
+    .header-logo {
         margin-bottom: 12.5rem;
-    }
-
-    .header__slogan {
-        margin-bottom: 7.6rem;
-    }
-
-    .header__app-buttons {
-        margin-bottom: 8.4rem;
     }
 }
 
@@ -292,18 +240,10 @@ path.logo__icon-text {
         background-image: url("../images/football_1280.jpg");
     }
 
-    .header__logo {
-        margin-top: 4rem;
+    .header-logo {
         margin-bottom: 16rem;
     }
 
-    .header__slogan {
-        margin-bottom: 28.5rem;
-    }
-
-    .header__app-buttons {
-        margin-bottom: 9rem;
-    }
 }
 
 @media (min-width: 1280px) {
@@ -311,16 +251,599 @@ path.logo__icon-text {
         background-image: url("../images/football_1920.jpg");
     }
 
-    .header__logo {
-        margin-top: 4.5rem;
+    .header-logo {
         margin-bottom: 26.4rem;
     }
 
-    .header__slogan {
-        margin-bottom: 19.6rem;
+}
+
+.header-buttons {
+    display: flex;
+    justify-content: center;
+}
+
+@media (max-width: 767px) {
+    .header-buttons {
+        flex-wrap: wrap;
+    }
+}
+
+.header-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+@media (max-width: 767px) {
+    .header-container {
+        padding-top: 3.3rem;
+        padding-bottom: 8.4rem;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1279px) {
+    .header-container {
+        padding-top: 4rem;
+        padding-bottom: 8.8rem;
+    }
+}
+
+@media (min-width: 1280px) {
+    .header-container {
+        padding-top: 4.5rem;
+        padding-bottom: 10.5rem;
+    }
+}
+
+/* content */
+
+.content-section {
+    counter-reset: sectioncnt;
+    position: relative;
+}
+
+.section-block {
+    counter-increment: sectioncnt;
+}
+
+.section-block .container > *:last-child {
+    margin-bottom: 0;
+}
+
+.section-title {
+    color: #e7e7e7;
+    text-transform: uppercase;
+    line-height: 1.1em;
+    margin-top: 0;
+}
+
+.section-subtitle {
+    color: #c1c1c1;
+    text-transform: uppercase;
+    line-height: 1.2em;
+    margin-top: 0;
+}
+
+.section-subtitle .number {
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+    line-height: 1.3em;
+    color: #000000;
+}
+
+.section-subtitle .number:after {
+    content: "";
+    width: 100%;
+    background-color: #5e42b0;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+.section-subtitle .number:before {
+    content: counter(sectioncnt, decimal-leading-zero);
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.background-medium .section-subtitle .number:after,
+.background-dark .section-subtitle .number:after {
+    background-color: #ffffff;
+}
+
+.background-medium,
+.background-dark {
+    color: #ffffff;
+}
+
+.background-dark .section-subtitle .number {
+    color: #9173e6;
+}
+
+.section-subtitle .caption {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+@media (max-width: 767px) {
+    .section-title {
+        font-size: 5rem;
+        margin-top: -3rem;
+        margin-bottom: 0;
     }
 
-    .header__app-buttons {
-        margin-bottom: 11rem;
+    .section-block {
+        padding-top: 5rem;
+        padding-bottom: 5rem;
+        font-size: 1.5rem;
+        line-height: 1.2em;
+        letter-spacing: 0.05rem;
+    }
+
+    .section-subtitle {
+        font-size: 2.8rem;
+        margin-bottom: 2rem;
+    }
+
+    .section-subtitle .number {
+        font-size: .5em;
+        padding-bottom: .5rem;
+        margin-right: .9rem;
+    }
+
+    .section-subtitle .number:after {
+        height: .4rem;
+        border-radius: .4rem;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1279px) {
+    .section-title {
+        font-size: 8rem;
+        margin-top: 3rem;
+        margin-bottom: 4.2rem;
+    }
+
+    .section-block {
+        box-sizing: border-box;
+        min-height: 20.5rem;
+        padding-top: 3rem;
+        padding-bottom: 3.6rem;
+        font-size: 1.6rem;
+        line-height: 1.7em;
+    }
+
+    .section-subtitle {
+        font-size: 3.2rem;
+        margin-bottom: 2rem;
+    }
+}
+
+@media (min-width: 768px) {
+    .section-subtitle .number {
+        font-size: 1.8rem;
+        padding-bottom: .6rem;
+        margin-right: 1rem;
+    }
+
+    .section-subtitle .number:after {
+        height: .5rem;
+        border-radius: .5rem;
+    }
+
+    .section-subtitle .caption {
+        letter-spacing: 0.06em;
+    }
+}
+
+@media (min-width: 1280px) {
+    .content-section {
+        overflow: hidden;
+    }
+
+    .section-title {
+        font-size: 8.5rem;
+        margin-bottom: 8rem;
+    }
+
+    .section-block {
+        padding-top: 5.1rem;
+        padding-bottom: 5.5rem;
+        font-size: 2rem;
+        min-height: 25rem;
+        box-sizing: border-box;
+        position: relative;
+    }
+
+    .section-subtitle {
+        font-size: 3.6rem;
+        margin-bottom: 1.6rem;
+    }
+    .section-subtitle .number{
+        margin-top: -1.1rem;
+    }
+}
+
+.background-light {
+    background-color: #f5f4f9;
+}
+
+.background-medium {
+    background-color: #5e42b0;
+}
+
+.background-dark {
+    background-color: #0a0e34;
+}
+
+/* athletes */
+
+.athletes-container {
+
+}
+
+.athletes-container:before {
+    content: "";
+    display: block;
+    background-repeat: no-repeat;
+}
+
+@media (max-width: 767px) {
+    .athletes-container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .athletes-container .section-title {
+        order: -1;
+    }
+
+    .athletes-container:before {
+        width: 192px;
+        height: 281px;
+        margin-left: auto;
+        margin-right: auto;
+        background-image: url(../images/footballer_192.png);
+        margin-bottom: 1rem;
+        margin-top: 0.6rem;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1279px) {
+    .athletes-container:before {
+        width: 497px;
+        height: 700px;
+        background-image: url(../images/footballer_497.png);
+        right: 56%;
+        top: 9rem;
+    }
+
+    .athletes .section-block .container {
+        padding-left: 38%;
+    }
+}
+
+@media (min-width: 768px) {
+    .athletes-container:before {
+        position: absolute;
+    }
+}
+
+@media (min-width: 1280px) {
+    .athletes-container {
+        position: relative;
+        padding-top: 5rem;
+    }
+
+    .athletes-container:before {
+        width: 566px;
+        height: 908px;
+        background-image: url(../images/footballer_566.png);
+        top: -2rem;
+        z-index: 1;
+    }
+}
+
+@media (min-width: 1280px) and (max-width: 1599px) {
+    .athletes-container:before {
+        right: 50%;
+    }
+
+    .athletes .section-block .container {
+        padding-left: 51%;
+    }
+}
+
+@media (min-width: 1600px) {
+    .athletes-container:before {
+        right: 78rem;
+    }
+
+    .athletes .section-block .container {
+        padding-left: 83rem;
+    }
+}
+
+/* players */
+
+.players-container {
+
+}
+
+.players-container:before {
+    content: "";
+    display: block;
+    background-repeat: no-repeat;
+}
+
+@media (max-width: 767px) {
+    .players-container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .players-container .section-title {
+        order: -1;
+    }
+
+    .players-container:before {
+        width: 302px;
+        height: 248px;
+        margin-left: auto;
+        margin-right: auto;
+        background-image: url(../images/basketballer_302.png);
+        margin-bottom: 4.4rem;
+        margin-top: 0.5rem;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1279px) {
+    .players-container:before {
+        width: 436px;
+        height: 699px;
+        background-image: url(../images/basketballer_436.png);
+        right: 0;
+        top: 4rem;
+    }
+
+    .players .section-block .container {
+        padding-right: 38%;
+    }
+}
+
+@media (min-width: 768px) {
+    .players-container:before {
+        position: absolute;
+    }
+}
+
+@media (min-width: 1280px) {
+    .players-container {
+        position: relative;
+        padding-top: 5rem;
+    }
+
+    .players-container:before {
+        width: 991px;
+        height: 815px;
+        background-image: url(../images/basketballer_991.png);
+        top: -3rem;
+        z-index: 1;
+    }
+}
+
+@media (min-width: 1280px) and (max-width: 1599px) {
+    .players-container:before {
+        left: 45%;
+    }
+
+    .players .section-block .container {
+        padding-left: 10%;
+        padding-right: 51%;
+    }
+}
+
+@media (min-width: 1600px) {
+    .players-container:before {
+        left: 62.5rem;
+    }
+
+    .players .section-block .container {
+        padding-left: 14rem;
+        padding-right: 83rem;
+    }
+}
+
+/* steps */
+.steps {
+    counter-reset: steps;
+}
+
+.step {
+    counter-increment: steps;
+}
+
+.step .title-number {
+    color: #ffffff;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    background-color: #5e42b0;
+}
+
+.step .number {
+    display: inline-block;
+    position: relative;
+}
+
+.step .number:before {
+    content: counter(steps, decimal-leading-zero);
+    display: inline-block;
+    vertical-align: middle;
+    position: relative;
+}
+
+.step .number:after {
+    content: "";
+    width: 100%;
+    position: absolute;
+    background-color: #9173e6;
+    bottom: 0;
+    left: 0;
+}
+
+.step-picture {
+    max-width: 100%;
+}
+
+.step-picture .picture-src {
+    max-width: 100%;
+    display: block;
+}
+
+.step-title {
+    text-transform: uppercase;
+    color: #e7e7e7;
+    line-height: 1.2em;
+    margin-top: 0;
+}
+
+.step-content {
+    line-height: 1.25em;
+    box-sizing: border-box;
+}
+
+.step-content > *:last-child {
+    margin-bottom: 0;
+}
+
+@media (max-width: 767px) {
+    .step-title {
+        font-size: 2.8rem;
+        margin-bottom: 2.2rem;
+    }
+
+    .step-content {
+        font-size: 1.6rem;
+        padding-top: 3rem;
+        padding-bottom: 6rem;
+        padding-left: 2rem;
+        padding-right: 2rem;
+        min-height: 21.2rem;
+    }
+
+    .step .title-number {
+        width: 7rem;
+        height: 7rem;
+
+    }
+
+    .step .number {
+        font-size: 1.4rem;
+        line-height: 2.2em;
+    }
+
+    .step .number:after {
+        height: 0.4rem;
+        border-radius: 0.4rem;
+    }
+
+    .step .title-number {
+        top: 0;
+        margin-top: -9rem;
+    }
+}
+
+@media (min-width: 768px) {
+    .step-title {
+        font-size: 8rem;
+    }
+    .step .number {
+        font-size: 2.4rem;
+        line-height: 2.2em;
+        letter-spacing: 0.05rem;
+    }
+    .step .number:after {
+        height: 0.5rem;
+        border-radius: 0.5rem;
+    }
+    .step-content {
+        position: relative;
+        font-size: 2.4rem;
+    }
+}
+@media (max-width: 1023px){
+    .step-title {
+        position: relative;
+    }
+
+}
+@media (min-width: 768px) and (max-width: 1023px) {
+    .step-title {
+        font-size: 8rem;
+    }
+    .step-content {
+        padding-top: 7.8rem;
+        padding-bottom: 9.8rem;
+        padding-left: 3rem;
+        padding-right: 3rem;
+        line-height: 1.2em;
+    }
+
+    .step .title-number {
+        width: 11.6rem;
+        height: 11.6rem;
+    }
+
+    .step .title-number {
+        top: 0;
+        margin-top: -16rem;
+    }
+}
+
+@media (min-width: 1024px) {
+    .step .title-number {
+        width: 16.8rem;
+        height: 15.5rem;
+    }
+    .step-title {
+        margin-bottom: 10rem;
+    }
+    .step{
+        display: flex;
+    }
+    .step-picture{
+        width: 50%;
+    }
+    .step-content{
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding-left: 12.8rem;
+        padding-right: 10rem;
+    }
+    .step .title-number{
+        left: -7.5rem;
+        margin-top: -2.5rem;
+    }
+    .step .number{
+        margin-top: -2.2rem;
+    }
+    .steps{
+        max-width: 1920px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .step:nth-child(2n) .step-picture{
+        order: 1;
+    }
+    .step:nth-child(2n) .title-number{
+        left: auto;
+        right: -8rem;
     }
 }
