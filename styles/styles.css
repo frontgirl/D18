@@ -43,13 +43,19 @@ p {
 }
 
 @media (max-width: 767px) {
-    .header-logo .icon {
+    .header-logo, .footer-logo{
+        width: 13.6rem;
+    }
+    .header-logo .icon, .footer-logo .icon {
         height: 3.6rem;
     }
 }
 
 @media (min-width: 768px) {
-    .header-logo .icon {
+    .header-logo, .footer-logo{
+        width: 18.7rem;
+    }
+    .header-logo .icon, .footer-logo .icon {
         height: 5.1rem;
     }
 }
@@ -88,6 +94,8 @@ p {
     font-weight: bold;
     text-transform: uppercase;
     letter-spacing: .04em;
+    text-align: left;
+    display: inline-block;
 }
 
 .header-slogan .title,
@@ -224,6 +232,11 @@ p {
     left: 0;
     z-index: 0;
 }
+.header-logo, .footer-logo{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
 
 @media (max-width: 767px) {
     .header {
@@ -257,22 +270,26 @@ p {
 
 }
 
-.header-buttons {
+.header-buttons, .footer-buttons {
     display: flex;
     justify-content: center;
 }
 
 @media (max-width: 767px) {
-    .header-buttons {
+    .header-buttons, .footer-buttons {
         flex-wrap: wrap;
+        max-width: 280px;
+        margin-left: auto;
+        margin-right: auto;
     }
 }
 
 .header-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    /*display: flex;*/
+    /*flex-direction: column;*/
+    /*align-items: center;*/
     position: relative;
+    text-align: center;
 }
 
 @media (max-width: 767px) {
@@ -461,7 +478,8 @@ p {
         font-size: 3.6rem;
         margin-bottom: 1.6rem;
     }
-    .section-subtitle .number{
+
+    .section-subtitle .number {
         margin-top: -1.1rem;
     }
 }
@@ -762,30 +780,36 @@ p {
     .step-title {
         font-size: 8rem;
     }
+
     .step .number {
         font-size: 2.4rem;
         line-height: 2.2em;
         letter-spacing: 0.05rem;
     }
+
     .step .number:after {
         height: 0.5rem;
         border-radius: 0.5rem;
     }
+
     .step-content {
         position: relative;
         font-size: 2.4rem;
     }
 }
-@media (max-width: 1023px){
+
+@media (max-width: 1023px) {
     .step-title {
         position: relative;
     }
 
 }
+
 @media (min-width: 768px) and (max-width: 1023px) {
     .step-title {
         font-size: 8rem;
     }
+
     .step-content {
         padding-top: 7.8rem;
         padding-bottom: 9.8rem;
@@ -810,16 +834,20 @@ p {
         width: 16.8rem;
         height: 15.5rem;
     }
+
     .step-title {
         margin-bottom: 10rem;
     }
-    .step{
+
+    .step {
         display: flex;
     }
-    .step-picture{
+
+    .step-picture {
         width: 50%;
     }
-    .step-content{
+
+    .step-content {
         width: 50%;
         display: flex;
         flex-direction: column;
@@ -827,23 +855,200 @@ p {
         padding-left: 12.8rem;
         padding-right: 10rem;
     }
-    .step .title-number{
+
+    .step .title-number {
         left: -7.5rem;
         margin-top: -2.5rem;
     }
-    .step .number{
+
+    .step .number {
         margin-top: -2.2rem;
     }
-    .steps{
+
+    .steps {
         max-width: 1920px;
         margin-left: auto;
         margin-right: auto;
     }
-    .step:nth-child(2n) .step-picture{
+
+    .step:nth-child(2n) .step-picture {
         order: 1;
     }
-    .step:nth-child(2n) .title-number{
+
+    .step:nth-child(2n) .title-number {
         left: auto;
         right: -8rem;
+    }
+}
+
+/* footer */
+
+.footer {
+    background-color: #0a0e34;
+    background-size: cover;
+    background-position: top center;
+    background-repeat: no-repeat;
+    position: relative;
+    color: #ffffff;
+}
+
+.footer:before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    background-color: #0a0e34;
+    opacity: .9;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0;
+}
+
+.footer-container {
+    position: relative;
+}
+
+.download-logo {
+    background: linear-gradient(to right, #50329c, #7751db);
+    display: flex;
+}
+
+.download-logo .icon {
+    margin: auto;
+}
+
+.footer-slogan {
+    text-transform: uppercase;
+}
+
+.footer-slogan .title {
+    font-weight: bold;
+    display: block;
+}
+
+.footer-slogan .subtitle {
+    color: #9b8ec1;
+}
+
+@media (max-width: 767px) {
+    .footer {
+        background-image: url("../images/game_767.jpg");
+    }
+
+    .footer-container {
+        padding-top: 9.7rem;
+        padding-bottom: .6rem;
+    }
+
+    .download-logo {
+        width: 7.4rem;
+        height: 7.4rem;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 7.4rem;
+        border-radius: 2rem;
+    }
+
+    .download-logo .icon {
+        height: 4.6rem;
+    }
+    .footer-slogan {
+        margin-bottom: 7.3rem;
+    }
+    .footer-slogan .title {
+        font-size: 3.2rem;
+    }
+
+    .footer-slogan .subtitle {
+        font-size: 1.4rem;
+    }
+    .footer-buttons{
+        margin-bottom: 8.4rem;
+    }
+}
+
+@media (max-width: 1279px) {
+    .footer-slogan {
+        text-align: center;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1279px) {
+    .footer {
+        background-image: url("../images/game_1280.jpg");
+    }
+
+    .footer-container {
+        padding-top: 12.2rem;
+        padding-bottom: 2rem;
+    }
+    .download-logo {
+        width: 13rem;
+        height: 13.7rem;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 7.3rem;
+        border-radius: 2rem;
+    }
+    .footer-slogan{
+        margin-bottom: 27.8rem;
+    }
+    .download-logo .icon {
+        height: 8.4rem;
+    }
+
+    .footer-slogan .title {
+        font-size: 8rem;
+        letter-spacing: 0.05rem;
+    }
+
+    .footer-slogan .subtitle {
+        font-size: 3.6rem;
+    }
+    .footer-buttons{
+        margin-bottom: 4rem;
+    }
+}
+@media (min-width: 768px){
+    .footer-slogan .title {
+        font-size: 8rem;
+        letter-spacing: 0.05rem;
+    }
+    .download-logo .icon {
+        height: 8.4rem;
+    }
+    .download-logo {
+        width: 13rem;
+        height: 13.7rem;
+        margin-right: 3rem;
+        border-radius: 2rem;
+    }
+}
+@media (min-width: 1280px) {
+    .footer {
+        background-image: url("../images/game_1920.jpg");
+    }
+
+    .footer-container {
+        padding-top: 22rem;
+        padding-bottom: 4.6rem;
+    }
+    .download-app{
+        display: flex;
+        justify-content: center;
+    }
+    .footer-slogan{
+        margin-bottom: 15.3rem;
+    }
+    .footer-slogan .title{
+        line-height: 1.1em;
+        margin-top: .6rem;
+    }
+
+    .footer-slogan .subtitle {
+        font-size: 3rem;
+    }
+    .footer-buttons{
+        margin-bottom: 24.8rem;
     }
 }
