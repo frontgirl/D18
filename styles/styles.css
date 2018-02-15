@@ -43,18 +43,20 @@ p {
 }
 
 @media (max-width: 767px) {
-    .header-logo, .footer-logo{
+    .header-logo, .footer-logo {
         width: 13.6rem;
     }
+
     .header-logo .icon, .footer-logo .icon {
         height: 3.6rem;
     }
 }
 
 @media (min-width: 768px) {
-    .header-logo, .footer-logo{
+    .header-logo, .footer-logo {
         width: 18.7rem;
     }
+
     .header-logo .icon, .footer-logo .icon {
         height: 5.1rem;
     }
@@ -127,11 +129,13 @@ p {
         margin-left: 10.8rem;
     }
 }
+
 @media (max-width: 1279px) {
-    .header-slogan{
+    .header-slogan {
         display: inline-block;
     }
 }
+
 @media (min-width: 1280px) {
     .header-slogan {
         font-size: 9rem;
@@ -235,7 +239,8 @@ p {
     left: 0;
     z-index: 0;
 }
-.header-logo, .footer-logo{
+
+.header-logo, .footer-logo {
     display: block;
     margin-left: auto;
     margin-right: auto;
@@ -955,9 +960,11 @@ p {
     .download-logo .icon {
         height: 4.6rem;
     }
+
     .footer-slogan {
         margin-bottom: 7.3rem;
     }
+
     .footer-slogan .title {
         font-size: 3.2rem;
     }
@@ -965,7 +972,8 @@ p {
     .footer-slogan .subtitle {
         font-size: 1.4rem;
     }
-    .footer-buttons{
+
+    .footer-buttons {
         margin-bottom: 8.4rem;
     }
 }
@@ -985,6 +993,7 @@ p {
         padding-top: 12.2rem;
         padding-bottom: 2rem;
     }
+
     .download-logo {
         width: 13rem;
         height: 13.7rem;
@@ -993,9 +1002,11 @@ p {
         margin-bottom: 7.3rem;
         border-radius: 2rem;
     }
-    .footer-slogan{
+
+    .footer-slogan {
         margin-bottom: 27.8rem;
     }
+
     .download-logo .icon {
         height: 8.4rem;
     }
@@ -1008,18 +1019,22 @@ p {
     .footer-slogan .subtitle {
         font-size: 3.6rem;
     }
-    .footer-buttons{
+
+    .footer-buttons {
         margin-bottom: 4rem;
     }
 }
-@media (min-width: 768px){
+
+@media (min-width: 768px) {
     .footer-slogan .title {
         font-size: 8rem;
         letter-spacing: 0.05rem;
     }
+
     .download-logo .icon {
         height: 8.4rem;
     }
+
     .download-logo {
         width: 13rem;
         height: 13.7rem;
@@ -1027,6 +1042,7 @@ p {
         border-radius: 2rem;
     }
 }
+
 @media (min-width: 1280px) {
     .footer {
         background-image: url("../images/game_1920.jpg");
@@ -1036,14 +1052,17 @@ p {
         padding-top: 22rem;
         padding-bottom: 4.6rem;
     }
-    .download-app{
+
+    .download-app {
         display: flex;
         justify-content: center;
     }
-    .footer-slogan{
+
+    .footer-slogan {
         margin-bottom: 15.3rem;
     }
-    .footer-slogan .title{
+
+    .footer-slogan .title {
         line-height: 1.1em;
         margin-top: .6rem;
     }
@@ -1051,7 +1070,8 @@ p {
     .footer-slogan .subtitle {
         font-size: 3rem;
     }
-    .footer-buttons{
+
+    .footer-buttons {
         margin-bottom: 24.8rem;
     }
 }
