@@ -38,7 +38,7 @@ p {
 
 /* LOGO */
 
-.icon path {
+.icon {
     fill: #fff;
 }
 
@@ -62,8 +62,19 @@ p {
     }
 }
 
+.main-title {
+    visibility: hidden;
+    line-height: 0;
+    overflow: hidden;
+    margin: 0;
+}
+
 .container {
     box-sizing: border-box;
+}
+.title{
+    margin-top: 0;
+    margin-bottom: 0;
 }
 
 @media (max-width: 767px) {
@@ -99,8 +110,8 @@ p {
     text-align: left;
 }
 
-.header-slogan .title,
-.header-slogan .subtitle {
+.header-slogan .first-line,
+.header-slogan .second-line {
     display: block;
 }
 
@@ -110,10 +121,10 @@ p {
         margin-bottom: 8.3rem;
     }
 
-    .header-slogan .subtitle {
+    .header-slogan .second-line {
         margin-top: 1.2rem;
         margin-left: 4rem;
-        line-height: 1.2em;
+        line-height: 1.2;
     }
 }
 
@@ -124,7 +135,7 @@ p {
         margin-bottom: 28.5rem;
     }
 
-    .header-slogan .subtitle {
+    .header-slogan .second-line {
         margin-top: -1rem;
         margin-left: 10.8rem;
     }
@@ -142,7 +153,7 @@ p {
         margin-bottom: 19.6rem;
     }
 
-    .header-slogan .subtitle {
+    .header-slogan .second-line {
         width: 100%;
         text-align: right;
         margin-top: -3.1rem;
@@ -151,7 +162,7 @@ p {
 
 /* APP BUTTONS */
 
-.app-button {
+.market-button {
     background-color: #5e42b0;
     color: #ffffff;
     box-sizing: border-box;
@@ -159,15 +170,16 @@ p {
     text-transform: uppercase;
     display: flex;
     align-items: center;
+    text-align: left;
 }
 
-.app-button .type {
+.market-button .market {
     display: block;
     font-weight: bold;
 }
 
 @media (max-width: 767px) {
-    .app-button {
+    .market-button {
         width: 100%;
         max-width: 280px;
         padding-top: .6rem;
@@ -177,18 +189,18 @@ p {
         font-size: .8rem;
     }
 
-    .app-button + .app-button {
+    .market-button + .market-button {
         margin-top: 1.4rem;
     }
 
-    .app-button .icon {
+    .market-button .icon {
         height: 2.4rem;
         margin-right: .6rem;
     }
 }
 
 @media (min-width: 768px) {
-    .app-button {
+    .market-button {
         font-size: 1.6rem;
         padding: 1.6rem 5rem 1.6rem 3.8rem;
         border-radius: 38px;
@@ -196,7 +208,7 @@ p {
         justify-content: center;
     }
 
-    .app-button .icon {
+    .market-button .icon {
         height: 4.8rem;
         margin-right: 2.2rem;
     }
@@ -207,13 +219,13 @@ p {
 }
 
 @media (min-width: 768px) and (max-width: 1279px) {
-    .app-button:nth-child(2n) {
+    .market-button:nth-child(2n) {
         margin-left: 3rem;
     }
 }
 
 @media (min-width: 1280px) {
-    .app-button:nth-child(2n) {
+    .market-button:nth-child(2n) {
         margin-left: 5.2rem;
     }
 }
@@ -323,42 +335,34 @@ p {
 
 /* content */
 
-.content-section {
-    counter-reset: sectioncnt;
+.content {
     position: relative;
 }
 
-.section-block {
-    counter-increment: sectioncnt;
-}
-
-.section-block .container > *:last-child {
+.section-main-title {
+    color: #e7e7e7;
+    text-transform: uppercase;
+    line-height: 1.1;
+    margin-top: 0;
     margin-bottom: 0;
 }
 
 .section-title {
-    color: #e7e7e7;
-    text-transform: uppercase;
-    line-height: 1.1em;
-    margin-top: 0;
-}
-
-.section-subtitle {
     color: #c1c1c1;
     text-transform: uppercase;
     line-height: 1.2em;
     margin-top: 0;
 }
 
-.section-subtitle .number {
+.section-title .number {
     position: relative;
     display: inline-block;
     vertical-align: middle;
-    line-height: 1.3em;
+    line-height: 1.3;
     color: #000000;
 }
 
-.section-subtitle .number:after {
+.section-title .number:after {
     content: "";
     width: 100%;
     background-color: #5e42b0;
@@ -367,166 +371,166 @@ p {
     left: 0;
 }
 
-.section-subtitle .number:before {
-    content: counter(sectioncnt, decimal-leading-zero);
-    display: inline-block;
-    vertical-align: middle;
-}
-
-.background-medium .section-subtitle .number:after,
-.background-dark .section-subtitle .number:after {
+.section-bg-medium .section-title .number:after,
+.section-bg-dark .section-title .number:after {
     background-color: #ffffff;
 }
 
-.background-medium,
-.background-dark {
+.section-bg-medium,
+.section-bg-dark {
     color: #ffffff;
 }
 
-.background-dark .section-subtitle .number {
+.section-bg-dark .section-title .number {
     color: #9173e6;
 }
 
-.section-subtitle .caption {
+.section-title .title {
     display: inline-block;
     vertical-align: middle;
 }
 
-@media (max-width: 767px) {
-    .section-title {
-        font-size: 5rem;
-        margin-top: -3rem;
-        margin-bottom: 0;
-    }
+.section-container p:last-child {
+    margin-bottom: 0;
+}
 
-    .section-block {
+@media (max-width: 767px) {
+    .section-main-title {
+        font-size: 5rem;
+    }
+    .section-heading{
+        margin-top: 1.5rem;
+        margin-bottom: 2rem;
+    }
+    .section {
         padding-top: 5rem;
         padding-bottom: 5rem;
         font-size: 1.5rem;
-        line-height: 1.2em;
+        line-height: 1.2;
         letter-spacing: 0.05rem;
     }
-
-    .section-subtitle {
+    .section:nth-child(n+3){
+        min-height: 20.5rem;
+    }
+    .section-title {
         font-size: 2.8rem;
         margin-bottom: 2rem;
     }
 
-    .section-subtitle .number {
+    .section-title .number {
         font-size: .5em;
         padding-bottom: .5rem;
         margin-right: .9rem;
     }
 
-    .section-subtitle .number:after {
+    .section-title .number:after {
         height: .4rem;
         border-radius: .4rem;
     }
 }
 
 @media (min-width: 768px) and (max-width: 1279px) {
-    .section-title {
+    .section-main-title {
         font-size: 8rem;
+    }
+    .section-heading {
         margin-top: 3rem;
         margin-bottom: 4.2rem;
     }
-
-    .section-block {
+    .section {
         box-sizing: border-box;
-        min-height: 20.5rem;
         padding-top: 3rem;
         padding-bottom: 3.6rem;
         font-size: 1.6rem;
-        line-height: 1.7em;
+        line-height: 1.7;
     }
 
-    .section-subtitle {
+    .section-title {
         font-size: 3.2rem;
         margin-bottom: 2rem;
     }
 }
 
 @media (min-width: 768px) {
-    .section-subtitle .number {
+    .section-title .number {
         font-size: 1.8rem;
         padding-bottom: .6rem;
         margin-right: 1rem;
     }
 
-    .section-subtitle .number:after {
+    .section-title .number:after {
         height: .5rem;
         border-radius: .5rem;
     }
 
-    .section-subtitle .caption {
+    .section-title .caption {
         letter-spacing: 0.06em;
     }
 }
 
 @media (min-width: 1280px) {
-    .content-section {
+    .content {
         overflow: hidden;
     }
 
-    .section-title {
+    .section-main-title {
         font-size: 8.5rem;
-        margin-bottom: 8rem;
+        margin-top: 10rem;
+        margin-bottom: 2.5rem;
     }
 
-    .section-block {
+    .section {
         padding-top: 5.1rem;
         padding-bottom: 5.5rem;
         font-size: 2rem;
-        min-height: 25rem;
         box-sizing: border-box;
         position: relative;
     }
+    .section:nth-child(n+3){
+        min-height: 25rem;
+    }
 
-    .section-subtitle {
+    .section-title {
         font-size: 3.6rem;
         margin-bottom: 1.6rem;
     }
-
-    .section-subtitle .number {
-        margin-top: -1.1rem;
-    }
 }
 
-.background-light {
+.section-bg-light {
     background-color: #f5f4f9;
 }
 
-.background-medium {
+.section-bg-medium {
     background-color: #5e42b0;
 }
 
-.background-dark {
+.section-bg-dark {
     background-color: #0a0e34;
 }
 
 /* athletes */
 
-.athletes-container {
+.athletes-heading-container {
 
 }
 
-.athletes-container:before {
+.athletes-heading-container:before {
     content: "";
     display: block;
     background-repeat: no-repeat;
 }
 
 @media (max-width: 767px) {
-    .athletes-container {
+    .athletes-heading-container {
         display: flex;
         flex-direction: column;
     }
 
-    .athletes-container .section-title {
+    .athletes-heading-container .section-main-title {
         order: -1;
     }
 
-    .athletes-container:before {
+    .athletes-heading-container:before {
         width: 192px;
         height: 281px;
         margin-left: auto;
@@ -538,7 +542,7 @@ p {
 }
 
 @media (min-width: 768px) and (max-width: 1279px) {
-    .athletes-container:before {
+    .athletes-heading-container:before {
         width: 497px;
         height: 700px;
         background-image: url(../images/footballer_497.png);
@@ -546,75 +550,80 @@ p {
         top: 9rem;
     }
 
-    .athletes .section-block .container {
+    .athletes .section .container {
         padding-left: 38%;
     }
 }
 
 @media (min-width: 768px) {
-    .athletes-container:before {
+    .athletes-heading-container:before {
         position: absolute;
     }
 }
 
 @media (min-width: 1280px) {
-    .athletes-container {
+    .athletes-heading-container {
         position: relative;
-        padding-top: 5rem;
     }
 
-    .athletes-container:before {
+    .athletes-heading-container:before {
         width: 566px;
         height: 908px;
         background-image: url(../images/footballer_566.png);
-        top: -2rem;
+        top: -7rem;
         z-index: 1;
     }
 }
 
 @media (min-width: 1280px) and (max-width: 1599px) {
-    .athletes-container:before {
+    .athletes-heading-container:before {
         right: 50%;
     }
+}
 
-    .athletes .section-block .container {
+@media (min-width: 1600px) {
+    .athletes-heading-container:before {
+        right: 78rem;
+    }
+
+}
+
+@media (min-width: 1280px) and (max-width: 1599px) {
+    .athletes .section-container {
         padding-left: 51%;
     }
 }
 
 @media (min-width: 1600px) {
-    .athletes-container:before {
-        right: 78rem;
-    }
-
-    .athletes .section-block .container {
+    .athletes .section-container {
         padding-left: 83rem;
     }
+
 }
 
 /* players */
 
-.players-container {
+.players-heading-container {
 
 }
 
-.players-container:before {
+.players-heading-container:before {
     content: "";
     display: block;
     background-repeat: no-repeat;
 }
 
 @media (max-width: 767px) {
-    .players-container {
+    .players-heading-container {
         display: flex;
         flex-direction: column;
     }
 
-    .players-container .section-title {
+    .players-heading-container .section-main-title {
         order: -1;
     }
 
-    .players-container:before {
+    .players-heading-container:before {
         width: 302px;
         height: 248px;
         margin-left: auto;
@@ -626,7 +635,7 @@ p {
 }
 
 @media (min-width: 768px) and (max-width: 1279px) {
-    .players-container:before {
+    .players-heading-container:before {
         width: 436px;
         height: 699px;
         background-image: url(../images/basketballer_436.png);
@@ -634,61 +643,66 @@ p {
         top: 4rem;
     }
 
-    .players .section-block .container {
+    .players .section .container {
         padding-right: 38%;
     }
 }
 
 @media (min-width: 768px) {
-    .players-container:before {
+    .players-heading-container:before {
         position: absolute;
     }
 }
 
 @media (min-width: 1280px) {
-    .players-container {
+    .players-heading-container {
         position: relative;
-        padding-top: 5rem;
     }
 
-    .players-container:before {
+    .players-heading-container:before {
         width: 991px;
         height: 815px;
         background-image: url(../images/basketballer_991.png);
-        top: -3rem;
+        top: -7.5rem;
         z-index: 1;
     }
 }
 
 @media (min-width: 1280px) and (max-width: 1599px) {
-    .players-container:before {
+    .players-heading-container:before {
         left: 45%;
     }
+}
 
-    .players .section-block .container {
+@media (min-width: 1600px) {
+    .players-heading-container:before {
+        left: 62.5rem;
+    }
+
+}
+
+.section-container {
+    box-sizing: border-box;
+}
+
+@media (min-width: 1280px) and (max-width: 1599px) {
+    .players .section-container {
         padding-left: 10%;
         padding-right: 51%;
     }
 }
 
 @media (min-width: 1600px) {
-    .players-container:before {
-        left: 62.5rem;
-    }
-
-    .players .section-block .container {
+    .players .section-container {
         padding-left: 14rem;
         padding-right: 83rem;
     }
+
 }
 
 /* steps */
 .steps {
-    counter-reset: steps;
-}
 
-.step {
-    counter-increment: steps;
 }
 
 .step .title-number {
@@ -703,13 +717,6 @@ p {
 
 .step .number {
     display: inline-block;
-    position: relative;
-}
-
-.step .number:before {
-    content: counter(steps, decimal-leading-zero);
-    display: inline-block;
-    vertical-align: middle;
     position: relative;
 }
 
@@ -735,21 +742,27 @@ p {
     text-transform: uppercase;
     color: #e7e7e7;
     line-height: 1.2em;
+}
+
+.step-title .title {
     margin-top: 0;
 }
 
 .step-content {
-    line-height: 1.25em;
+    line-height: 1.25;
     box-sizing: border-box;
 }
 
-.step-content > *:last-child {
+.step-content > p:last-child {
     margin-bottom: 0;
 }
 
 @media (max-width: 767px) {
     .step-title {
         font-size: 2.8rem;
+    }
+
+    .step-title .title {
         margin-bottom: 2.2rem;
     }
 
@@ -770,7 +783,7 @@ p {
 
     .step .number {
         font-size: 1.4rem;
-        line-height: 2.2em;
+        line-height: 2.2;
     }
 
     .step .number:after {
@@ -789,9 +802,13 @@ p {
         font-size: 8rem;
     }
 
+    .step-title .title {
+        margin-bottom: 2rem;
+    }
+
     .step .number {
         font-size: 2.4rem;
-        line-height: 2.2em;
+        line-height: 2.2;
         letter-spacing: 0.05rem;
     }
 
@@ -823,7 +840,7 @@ p {
         padding-bottom: 9.8rem;
         padding-left: 3rem;
         padding-right: 3rem;
-        line-height: 1.2em;
+        line-height: 1.2;
     }
 
     .step .title-number {
@@ -843,7 +860,7 @@ p {
         height: 15.5rem;
     }
 
-    .step-title {
+    .step-title .title {
         margin-bottom: 10rem;
     }
 
@@ -929,12 +946,12 @@ p {
     text-transform: uppercase;
 }
 
-.footer-slogan .title {
+.footer-slogan .motivation-text {
     font-weight: bold;
     display: block;
 }
 
-.footer-slogan .subtitle {
+.footer-slogan .hint {
     color: #9b8ec1;
 }
 
@@ -965,11 +982,11 @@ p {
         margin-bottom: 7.3rem;
     }
 
-    .footer-slogan .title {
+    .footer-slogan .motivation-text {
         font-size: 3.2rem;
     }
 
-    .footer-slogan .subtitle {
+    .footer-slogan .hint {
         font-size: 1.4rem;
     }
 
@@ -1011,12 +1028,12 @@ p {
         height: 8.4rem;
     }
 
-    .footer-slogan .title {
+    .footer-slogan .motivation-text {
         font-size: 8rem;
         letter-spacing: 0.05rem;
     }
 
-    .footer-slogan .subtitle {
+    .footer-slogan .hint {
         font-size: 3.6rem;
     }
 
@@ -1026,7 +1043,7 @@ p {
 }
 
 @media (min-width: 768px) {
-    .footer-slogan .title {
+    .footer-slogan .motivation-text {
         font-size: 8rem;
         letter-spacing: 0.05rem;
     }
@@ -1062,12 +1079,12 @@ p {
         margin-bottom: 15.3rem;
     }
 
-    .footer-slogan .title {
-        line-height: 1.1em;
+    .footer-slogan .motivation-text {
+        line-height: 1.1;
         margin-top: .6rem;
     }
 
-    .footer-slogan .subtitle {
+    .footer-slogan .hint {
         font-size: 3rem;
     }
 
