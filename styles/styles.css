@@ -64,8 +64,7 @@ p {
 
 .main-title {
     visibility: hidden;
-    line-height: 0;
-    overflow: hidden;
+    position: absolute;
     margin: 0;
 }
 
@@ -173,7 +172,7 @@ p {
     text-align: left;
 }
 
-.market-button .market {
+.market-button-type {
     display: block;
     font-weight: bold;
 }
@@ -354,7 +353,7 @@ p {
     margin-top: 0;
 }
 
-.section-title .number {
+.section-number {
     position: relative;
     display: inline-block;
     vertical-align: middle;
@@ -362,7 +361,7 @@ p {
     color: #000000;
 }
 
-.section-title .number:after {
+.section-number:after {
     content: "";
     width: 100%;
     background-color: #5e42b0;
@@ -371,8 +370,8 @@ p {
     left: 0;
 }
 
-.section-bg-medium .section-title .number:after,
-.section-bg-dark .section-title .number:after {
+.section-bg-medium .section-number:after,
+.section-bg-dark .section-number:after {
     background-color: #ffffff;
 }
 
@@ -381,7 +380,7 @@ p {
     color: #ffffff;
 }
 
-.section-bg-dark .section-title .number {
+.section-bg-dark .section-number {
     color: #9173e6;
 }
 
@@ -398,8 +397,10 @@ p {
     .section-main-title {
         font-size: 5rem;
     }
+    .content{
+        padding-top: 1.5rem;
+    }
     .section-heading{
-        margin-top: 1.5rem;
         margin-bottom: 2rem;
     }
     .section {
@@ -417,13 +418,13 @@ p {
         margin-bottom: 2rem;
     }
 
-    .section-title .number {
+    .section-number {
         font-size: .5em;
         padding-bottom: .5rem;
         margin-right: .9rem;
     }
 
-    .section-title .number:after {
+    .section-number:after {
         height: .4rem;
         border-radius: .4rem;
     }
@@ -433,8 +434,10 @@ p {
     .section-main-title {
         font-size: 8rem;
     }
+    .content{
+    }
     .section-heading {
-        margin-top: 3rem;
+        padding-top: 3rem;
         margin-bottom: 4.2rem;
     }
     .section {
@@ -452,13 +455,13 @@ p {
 }
 
 @media (min-width: 768px) {
-    .section-title .number {
+    .section-number {
         font-size: 1.8rem;
         padding-bottom: .6rem;
         margin-right: 1rem;
     }
 
-    .section-title .number:after {
+    .section-number:after {
         height: .5rem;
         border-radius: .5rem;
     }
@@ -472,10 +475,12 @@ p {
     .content {
         overflow: hidden;
     }
+    .section-heading{
+        padding-top: 10rem;
+    }
 
     .section-main-title {
         font-size: 8.5rem;
-        margin-top: 10rem;
         margin-bottom: 2.5rem;
     }
 
@@ -546,11 +551,12 @@ p {
         width: 497px;
         height: 700px;
         background-image: url(../images/footballer_497.png);
-        right: 56%;
-        top: 9rem;
+        right: 57%;
+        top: 2rem;
     }
 
-    .athletes .section .container {
+    .athletes .section .container,
+    .athletes .section-heading .container{
         padding-left: 38%;
     }
 }
@@ -643,7 +649,8 @@ p {
         top: 4rem;
     }
 
-    .players .section .container {
+    .players .section .container,
+    .players .section-heading .container{
         padding-right: 38%;
     }
 }
@@ -705,7 +712,7 @@ p {
 
 }
 
-.step .title-number {
+.step-number {
     color: #ffffff;
     text-align: center;
     display: flex;
@@ -715,12 +722,12 @@ p {
     background-color: #5e42b0;
 }
 
-.step .number {
+.step-number .number {
     display: inline-block;
     position: relative;
 }
 
-.step .number:after {
+.step-number .number:after {
     content: "";
     width: 100%;
     position: absolute;
@@ -775,44 +782,41 @@ p {
         min-height: 21.2rem;
     }
 
-    .step .title-number {
+    .step-number {
         width: 7rem;
         height: 7rem;
 
     }
 
-    .step .number {
+    .step-number .number {
         font-size: 1.4rem;
         line-height: 2.2;
     }
 
-    .step .number:after {
+    .step-number .number:after {
         height: 0.4rem;
         border-radius: 0.4rem;
     }
 
-    .step .title-number {
+    .step-number {
         top: 0;
         margin-top: -9rem;
     }
 }
 
 @media (min-width: 768px) {
-    .step-title {
-        font-size: 8rem;
-    }
 
     .step-title .title {
         margin-bottom: 2rem;
     }
 
-    .step .number {
+    .step-number {
         font-size: 2.4rem;
         line-height: 2.2;
         letter-spacing: 0.05rem;
     }
 
-    .step .number:after {
+    .step-number .number:after {
         height: 0.5rem;
         border-radius: 0.5rem;
     }
@@ -843,19 +847,19 @@ p {
         line-height: 1.2;
     }
 
-    .step .title-number {
+    .step-number {
         width: 11.6rem;
         height: 11.6rem;
     }
 
-    .step .title-number {
+    .step-number {
         top: 0;
         margin-top: -16rem;
     }
 }
 
 @media (min-width: 1024px) {
-    .step .title-number {
+    .step-number {
         width: 16.8rem;
         height: 15.5rem;
     }
@@ -881,12 +885,12 @@ p {
         padding-right: 10rem;
     }
 
-    .step .title-number {
+    .step-number {
         left: -7.5rem;
         margin-top: -2.5rem;
     }
 
-    .step .number {
+    .step-number .number {
         margin-top: -2.2rem;
     }
 
@@ -900,9 +904,22 @@ p {
         order: 1;
     }
 
-    .step:nth-child(2n) .title-number {
+    .step:nth-child(2n) .step-number {
         left: auto;
         right: -8rem;
+    }
+}
+@media (min-width: 1024px) and (max-width: 1279px){
+    .step-title{
+        font-size: 6rem;
+    }
+    .step-title .title{
+        margin-bottom: 5rem;
+    }
+}
+@media (min-width: 1280px){
+    .step-title {
+        font-size: 8rem;
     }
 }
 
