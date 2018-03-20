@@ -83,14 +83,14 @@ p {
     }
 }
 
-@media (min-width: 768px) and (max-width: 1279px) {
+@media (min-width: 768px) and (max-width: 960px) {
     .container {
         padding-left: 3rem;
         padding-right: 3rem;
     }
 }
 
-@media (min-width: 1280px) {
+@media (min-width: 961px) {
     .container {
         padding-left: 1.5rem;
         padding-right: 1.5rem;
@@ -127,7 +127,7 @@ p {
     }
 }
 
-@media (min-width: 768px) and (max-width: 1279px) {
+@media (min-width: 768px) and (max-width: 960px) {
     .header-slogan {
         font-size: 6.4rem;
         max-width: 60rem;
@@ -140,13 +140,13 @@ p {
     }
 }
 
-@media (max-width: 1279px) {
+@media (max-width: 960px) {
     .header-slogan {
         display: inline-block;
     }
 }
 
-@media (min-width: 1280px) {
+@media (min-width: 961px) {
     .header-slogan {
         font-size: 9rem;
         margin-bottom: 19.6rem;
@@ -217,13 +217,13 @@ p {
     }
 }
 
-@media (min-width: 768px) and (max-width: 1279px) {
+@media (min-width: 768px) and (max-width: 960px) {
     .market-button:nth-child(2n) {
         margin-left: 3rem;
     }
 }
 
-@media (min-width: 1280px) {
+@media (min-width: 961px) {
     .market-button:nth-child(2n) {
         margin-left: 5.2rem;
     }
@@ -267,7 +267,7 @@ p {
     }
 }
 
-@media (min-width: 768px) and (max-width: 1279px) {
+@media (min-width: 768px) and (max-width: 960px) {
     .header {
         background-image: url("../images/football_1280.jpg");
     }
@@ -278,7 +278,7 @@ p {
 
 }
 
-@media (min-width: 1280px) {
+@media (min-width: 961px) {
     .header {
         background-image: url("../images/football_1920.jpg");
     }
@@ -318,14 +318,14 @@ p {
     }
 }
 
-@media (min-width: 768px) and (max-width: 1279px) {
+@media (min-width: 768px) and (max-width: 960px) {
     .header-container {
         padding-top: 4rem;
         padding-bottom: 8.8rem;
     }
 }
 
-@media (min-width: 1280px) {
+@media (min-width: 961px) {
     .header-container {
         padding-top: 4.5rem;
         padding-bottom: 10.5rem;
@@ -430,7 +430,7 @@ p {
     }
 }
 
-@media (min-width: 768px) and (max-width: 1279px) {
+@media (min-width: 768px) and (max-width: 960px) {
     .section-main-title {
         font-size: 8rem;
     }
@@ -471,7 +471,7 @@ p {
     }
 }
 
-@media (min-width: 1280px) {
+@media (min-width: 961px) {
     .content {
         overflow: hidden;
     }
@@ -546,7 +546,7 @@ p {
     }
 }
 
-@media (min-width: 768px) and (max-width: 1279px) {
+@media (min-width: 768px) and (max-width: 960px) {
     .athletes-heading-container:before {
         width: 497px;
         height: 700px;
@@ -567,7 +567,7 @@ p {
     }
 }
 
-@media (min-width: 1280px) {
+@media (min-width: 961px) {
     .athletes-heading-container {
         position: relative;
     }
@@ -581,7 +581,7 @@ p {
     }
 }
 
-@media (min-width: 1280px) and (max-width: 1599px) {
+@media (min-width: 961px) and (max-width: 1599px) {
     .athletes-heading-container:before {
         right: 50%;
     }
@@ -594,7 +594,7 @@ p {
 
 }
 
-@media (min-width: 1280px) and (max-width: 1599px) {
+@media (min-width: 961px) and (max-width: 1599px) {
     .athletes .section-container {
         padding-left: 51%;
     }
@@ -640,7 +640,7 @@ p {
     }
 }
 
-@media (min-width: 768px) and (max-width: 1279px) {
+@media (min-width: 768px) and (max-width: 960px) {
     .players-heading-container:before {
         width: 436px;
         height: 699px;
@@ -661,7 +661,7 @@ p {
     }
 }
 
-@media (min-width: 1280px) {
+@media (min-width: 961px) {
     .players-heading-container {
         position: relative;
     }
@@ -675,7 +675,7 @@ p {
     }
 }
 
-@media (min-width: 1280px) and (max-width: 1599px) {
+@media (min-width: 961px) and (max-width: 1599px) {
     .players-heading-container:before {
         left: 45%;
     }
@@ -692,7 +692,7 @@ p {
     box-sizing: border-box;
 }
 
-@media (min-width: 1280px) and (max-width: 1599px) {
+@media (min-width: 961px) and (max-width: 1599px) {
     .players .section-container {
         padding-left: 10%;
         padding-right: 51%;
@@ -823,18 +823,17 @@ p {
 
     .step-content {
         position: relative;
-        font-size: 2.4rem;
     }
 }
 
-@media (max-width: 1023px) {
+@media (max-width: 960px) {
     .step-title {
         position: relative;
     }
 
 }
 
-@media (min-width: 768px) and (max-width: 1023px) {
+@media (min-width: 768px) and (max-width: 960px) {
     .step-title {
         font-size: 8rem;
     }
@@ -845,6 +844,7 @@ p {
         padding-left: 3rem;
         padding-right: 3rem;
         line-height: 1.2;
+        font-size: 2.4rem;
     }
 
     .step-number {
@@ -858,14 +858,10 @@ p {
     }
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 961px) {
     .step-number {
         width: 16.8rem;
         height: 15.5rem;
-    }
-
-    .step-title .title {
-        margin-bottom: 10rem;
     }
 
     .step {
@@ -909,17 +905,26 @@ p {
         right: -8rem;
     }
 }
-@media (min-width: 1024px) and (max-width: 1279px){
+@media (min-width: 961px) and (max-width: 1920px){
     .step-title{
-        font-size: 6rem;
+        font-size: 4.16vw; /* 4 rem */
     }
     .step-title .title{
-        margin-bottom: 5rem;
+        margin-bottom: 5.21vw; /* 5 rem */
+    }
+    .step-content{
+        font-size: calc(0.833vw + 0.8rem);/* 1.6 rem */
     }
 }
-@media (min-width: 1280px){
+@media (min-width: 1920px){
     .step-title {
         font-size: 8rem;
+    }
+    .step-title .title {
+        margin-bottom: 10rem;
+    }
+    .step-content{
+        font-size: 2.4rem;
     }
 }
 
@@ -1012,13 +1017,13 @@ p {
     }
 }
 
-@media (max-width: 1279px) {
+@media (max-width: 960px) {
     .footer-slogan {
         text-align: center;
     }
 }
 
-@media (min-width: 768px) and (max-width: 1279px) {
+@media (min-width: 768px) and (max-width: 960px) {
     .footer {
         background-image: url("../images/game_1280.jpg");
     }
@@ -1077,7 +1082,7 @@ p {
     }
 }
 
-@media (min-width: 1280px) {
+@media (min-width: 961px) {
     .footer {
         background-image: url("../images/game_1920.jpg");
     }
