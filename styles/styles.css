@@ -71,7 +71,8 @@ p {
 .container {
     box-sizing: border-box;
 }
-.title{
+
+.title {
     margin-top: 0;
     margin-bottom: 0;
 }
@@ -399,12 +400,15 @@ p {
     .section-main-title {
         font-size: 5rem;
     }
-    .content{
+
+    .content {
         padding-top: 1.5rem;
     }
-    .section-heading{
+
+    .section-heading {
         margin-bottom: 2rem;
     }
+
     .section {
         padding-top: 5rem;
         padding-bottom: 5rem;
@@ -412,9 +416,11 @@ p {
         line-height: 1.2;
         letter-spacing: 0.05rem;
     }
-    .section:nth-child(n+3){
+
+    .section:nth-child(n+3) {
         min-height: 20.5rem;
     }
+
     .section-title {
         font-size: 2.8rem;
         margin-bottom: 2rem;
@@ -438,12 +444,15 @@ p {
     .section-main-title {
         font-size: 8rem;
     }
-    .content{
+
+    .content {
     }
+
     .section-heading {
         padding-top: 3rem;
         margin-bottom: 4.2rem;
     }
+
     .section {
         box-sizing: border-box;
         padding-top: 3rem;
@@ -470,7 +479,8 @@ p {
         height: .5rem;
         border-radius: .5rem;
     }
-    .section-title{
+
+    .section-title {
         padding-left: 4rem;
     }
 
@@ -483,7 +493,8 @@ p {
     .content {
         overflow: hidden;
     }
-    .section-heading{
+
+    .section-heading {
         padding-top: 10rem;
     }
 
@@ -499,7 +510,8 @@ p {
         box-sizing: border-box;
         position: relative;
     }
-    .section:nth-child(n+3){
+
+    .section:nth-child(n+3) {
         min-height: 25rem;
     }
 
@@ -564,7 +576,7 @@ p {
     }
 
     .athletes .section .container,
-    .athletes .section-heading .container{
+    .athletes .section-heading .container {
         padding-left: 38%;
     }
 }
@@ -658,7 +670,7 @@ p {
     }
 
     .players .section .container,
-    .players .section-heading .container{
+    .players .section-heading .container {
         padding-right: 38%;
     }
 }
@@ -913,25 +925,31 @@ p {
         right: -8rem;
     }
 }
-@media (min-width: 961px) and (max-width: 1920px){
-    .step-title{
+
+@media (min-width: 961px) and (max-width: 1920px) {
+    .step-title {
         font-size: 4.16vw; /* 4 rem */
     }
-    .step-title .title{
+
+    .step-title .title {
         margin-bottom: 5.21vw; /* 5 rem */
     }
-    .step-content{
-        font-size: calc(0.833vw + 0.8rem);/* 1.6 rem */
+
+    .step-content {
+        font-size: calc(0.833vw + 0.8rem); /* 1.6 rem */
     }
 }
-@media (min-width: 1920px){
+
+@media (min-width: 1920px) {
     .step-title {
         font-size: 8rem;
     }
+
     .step-title .title {
         margin-bottom: 10rem;
     }
-    .step-content{
+
+    .step-content {
         font-size: 2.4rem;
     }
 }
