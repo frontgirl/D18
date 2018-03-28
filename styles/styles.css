@@ -36,6 +36,15 @@ p {
     margin-top: 0;
 }
 
+p:last-child {
+    margin-bottom: 0;
+}
+
+.visually-hidden {
+    position: absolute !important;
+    height: 1px; width: 1px;
+    overflow: hidden;
+}
 /* LOGO */
 
 .icon {
@@ -62,19 +71,8 @@ p {
     }
 }
 
-.main-title {
-    visibility: hidden;
-    position: absolute;
-    margin: 0;
-}
-
 .container {
     box-sizing: border-box;
-}
-
-.title {
-    margin-top: 0;
-    margin-bottom: 0;
 }
 
 @media (max-width: 767px) {
@@ -110,8 +108,8 @@ p {
     text-align: left;
 }
 
-.header-slogan .first-line,
-.header-slogan .second-line {
+.header-slogan-first-line,
+.header-slogan-second-line {
     display: block;
 }
 
@@ -121,7 +119,7 @@ p {
         margin-bottom: 8.3rem;
     }
 
-    .header-slogan .second-line {
+    .header-slogan-second-line {
         margin-top: 1.2rem;
         margin-left: 4rem;
         line-height: 1.2;
@@ -135,7 +133,7 @@ p {
         margin-bottom: 28.5rem;
     }
 
-    .header-slogan .second-line {
+    .header-slogan-second-line {
         margin-top: -1rem;
         margin-left: 10.8rem;
     }
@@ -150,13 +148,13 @@ p {
 @media (min-width: 961px) {
     .header-slogan {
         font-size: 9rem;
-        margin-bottom: 19.6rem;
+        margin-bottom: 21.4rem;
+        line-height: 1;
     }
 
-    .header-slogan .second-line {
+    .header-slogan-second-line {
         width: 100%;
         text-align: right;
-        margin-top: -3.1rem;
     }
 }
 
@@ -170,7 +168,6 @@ p {
     text-transform: uppercase;
     display: flex;
     align-items: center;
-    text-align: left;
 }
 
 .market-button-type {
@@ -261,6 +258,8 @@ p {
 @media (max-width: 767px) {
     .header {
         background-image: url("../images/football_767.jpg");
+        padding-top: 3.3rem;
+        padding-bottom: 8.4rem;
     }
 
     .header-logo {
@@ -271,6 +270,8 @@ p {
 @media (min-width: 768px) and (max-width: 960px) {
     .header {
         background-image: url("../images/football_1280.jpg");
+        padding-top: 4rem;
+        padding-bottom: 8.8rem;
     }
 
     .header-logo {
@@ -282,10 +283,12 @@ p {
 @media (min-width: 961px) {
     .header {
         background-image: url("../images/football_1920.jpg");
+        padding-top: 4.5rem;
+        padding-bottom: 10.5rem;
     }
 
     .header-logo {
-        margin-bottom: 26.4rem;
+        margin-bottom: 27.8rem;
     }
 
 }
@@ -305,34 +308,14 @@ p {
 }
 
 .header-container {
-    /*display: flex;*/
-    /*flex-direction: column;*/
-    /*align-items: center;*/
     position: relative;
-    text-align: center;
 }
 
-@media (max-width: 767px) {
-    .header-container {
-        padding-top: 3.3rem;
-        padding-bottom: 8.4rem;
+@media (max-width: 960px) {
+    .header-container{
+        text-align: center;
     }
 }
-
-@media (min-width: 768px) and (max-width: 960px) {
-    .header-container {
-        padding-top: 4rem;
-        padding-bottom: 8.8rem;
-    }
-}
-
-@media (min-width: 961px) {
-    .header-container {
-        padding-top: 4.5rem;
-        padding-bottom: 10.5rem;
-    }
-}
-
 /* content */
 
 .content {
@@ -348,10 +331,6 @@ p {
 }
 
 .section-title {
-    color: #c1c1c1;
-    text-transform: uppercase;
-    line-height: 1.2em;
-    margin-top: 0;
     position: relative;
 }
 
@@ -388,12 +367,10 @@ p {
 }
 
 .section-title .title {
-    display: inline-block;
-    vertical-align: middle;
-}
-
-.section-container p:last-child {
-    margin-bottom: 0;
+    margin-top: 0;
+    color: #c1c1c1;
+    text-transform: uppercase;
+    line-height: 1.2em;
 }
 
 @media (max-width: 767px) {
@@ -406,7 +383,8 @@ p {
     }
 
     .section-heading {
-        margin-bottom: 2rem;
+        margin-bottom: -3rem;
+        overflow-x: hidden;
     }
 
     .section {
@@ -417,21 +395,22 @@ p {
         letter-spacing: 0.05rem;
     }
 
-    .section:nth-child(n+3) {
-        min-height: 20.5rem;
-    }
-
     .section-title {
-        font-size: 2.8rem;
-        margin-bottom: 2rem;
+        font-size: 2.3rem;
         padding-left: 3rem;
     }
 
+    .section-title .title{
+        margin-bottom: 2rem;
+
+    }
+
     .section-number {
-        font-size: .5em;
+        font-size: 1.4rem;
         padding-bottom: .5rem;
         margin-right: .9rem;
         top: 0.6rem;
+        font-weight: bold;
     }
 
     .section-number:after {
@@ -443,9 +422,6 @@ p {
 @media (min-width: 768px) and (max-width: 960px) {
     .section-main-title {
         font-size: 8rem;
-    }
-
-    .content {
     }
 
     .section-heading {
@@ -463,8 +439,14 @@ p {
 
     .section-title {
         font-size: 3.2rem;
-        margin-bottom: 2rem;
         padding-left: 3rem;
+    }
+    .section-title .title{
+        margin-bottom: 2rem;
+
+    }
+    .section-number{
+        top: 1rem;
     }
 }
 
@@ -472,7 +454,6 @@ p {
     .section-number {
         font-size: 1.8rem;
         padding-bottom: .6rem;
-        top: 1rem;
     }
 
     .section-number:after {
@@ -481,7 +462,7 @@ p {
     }
 
     .section-title {
-        padding-left: 4rem;
+        padding-left: 3rem;
     }
 
     .section-title .caption {
@@ -511,13 +492,14 @@ p {
         position: relative;
     }
 
-    .section:nth-child(n+3) {
-        min-height: 25rem;
-    }
-
-    .section-title {
+    .section-title{
         font-size: 3.6rem;
-        margin-bottom: 1.6rem;
+    }
+    .section-title .title{
+        margin-bottom: 1.45rem;
+    }
+    .section-number{
+        top: 1rem;
     }
 }
 
@@ -534,10 +516,6 @@ p {
 }
 
 /* athletes */
-
-.athletes-heading-container {
-
-}
 
 .athletes-heading-container:before {
     content: "";
@@ -622,16 +600,12 @@ p {
 
 @media (min-width: 1600px) {
     .athletes .section-container {
-        padding-left: 83rem;
+        padding-left: 81rem;
     }
 
 }
 
 /* players */
-
-.players-heading-container {
-
-}
 
 .players-heading-container:before {
     content: "";
@@ -721,8 +695,8 @@ p {
 
 @media (min-width: 1600px) {
     .players .section-container {
-        padding-left: 14rem;
-        padding-right: 83rem;
+        padding-left: 13rem;
+        padding-right: 81rem;
     }
 
 }
@@ -768,7 +742,7 @@ p {
 .step-title {
     text-transform: uppercase;
     color: #e7e7e7;
-    line-height: 1.2em;
+    line-height: 1.2;
 }
 
 .step-title .title {
@@ -915,7 +889,9 @@ p {
         margin-left: auto;
         margin-right: auto;
     }
-
+    .step:nth-child(2n) .step-content{
+        padding-left: 19rem;
+    }
     .step:nth-child(2n) .step-picture {
         order: 1;
     }
@@ -928,7 +904,7 @@ p {
 
 @media (min-width: 961px) and (max-width: 1920px) {
     .step-title {
-        font-size: 4.16vw; /* 4 rem */
+        font-size: 3.125vw; /* 4 rem */
     }
 
     .step-title .title {
@@ -942,7 +918,7 @@ p {
 
 @media (min-width: 1920px) {
     .step-title {
-        font-size: 8rem;
+        font-size: 7rem;
     }
 
     .step-title .title {
@@ -997,6 +973,7 @@ p {
 .footer-slogan .motivation-text {
     font-weight: bold;
     display: block;
+    letter-spacing: 0.04em;
 }
 
 .footer-slogan .hint {
@@ -1006,9 +983,6 @@ p {
 @media (max-width: 767px) {
     .footer {
         background-image: url("../images/game_767.jpg");
-    }
-
-    .footer-container {
         padding-top: 9.7rem;
         padding-bottom: .6rem;
     }
@@ -1052,20 +1026,14 @@ p {
 @media (min-width: 768px) and (max-width: 960px) {
     .footer {
         background-image: url("../images/game_1280.jpg");
-    }
-
-    .footer-container {
         padding-top: 12.2rem;
         padding-bottom: 2rem;
     }
 
     .download-logo {
-        width: 13rem;
-        height: 13.7rem;
         margin-left: auto;
         margin-right: auto;
         margin-bottom: 7.3rem;
-        border-radius: 2rem;
     }
 
     .footer-slogan {
@@ -1074,11 +1042,6 @@ p {
 
     .download-logo .icon {
         height: 8.4rem;
-    }
-
-    .footer-slogan .motivation-text {
-        font-size: 8rem;
-        letter-spacing: 0.05rem;
     }
 
     .footer-slogan .hint {
@@ -1093,27 +1056,22 @@ p {
 @media (min-width: 768px) {
     .footer-slogan .motivation-text {
         font-size: 8rem;
-        letter-spacing: 0.05rem;
-    }
-
-    .download-logo .icon {
-        height: 8.4rem;
     }
 
     .download-logo {
         width: 13rem;
         height: 13.7rem;
-        margin-right: 3rem;
         border-radius: 2rem;
+    }
+
+    .download-logo .icon {
+        height: 8.4rem;
     }
 }
 
 @media (min-width: 961px) {
     .footer {
         background-image: url("../images/game_1920.jpg");
-    }
-
-    .footer-container {
         padding-top: 22rem;
         padding-bottom: 4.6rem;
     }
@@ -1121,6 +1079,10 @@ p {
     .download-app {
         display: flex;
         justify-content: center;
+    }
+
+    .download-logo{
+        margin-right: 3rem;
     }
 
     .footer-slogan {
