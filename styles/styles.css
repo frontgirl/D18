@@ -323,6 +323,16 @@ p:last-child {
     position: relative;
 }
 
+.section-container {
+    box-sizing: border-box;
+}
+@media (min-width: 961px){
+    .section-container {
+        position: relative;
+        z-index: 1;
+    }
+}
+
 .section-main-title {
     color: #e7e7e7;
     text-transform: uppercase;
@@ -681,10 +691,6 @@ p:last-child {
         left: 62.5rem;
     }
 
-}
-
-.section-container {
-    box-sizing: border-box;
 }
 
 @media (min-width: 961px) and (max-width: 1599px) {
