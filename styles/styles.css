@@ -232,22 +232,23 @@ p:last-child {
 
 .header {
     background-color: #0a0e34;
-    background-size: cover;
-    background-position: top center;
-    background-repeat: no-repeat;
     position: relative;
+    z-index: -1;
 }
 
 .header:before {
     content: "";
     width: 100%;
     height: 100%;
-    background-color: #0a0e34;
-    opacity: .9;
     position: absolute;
     top: 0;
     left: 0;
-    z-index: 0;
+    z-index: -1;
+    opacity: 0.1;
+
+    background-size: cover;
+    background-position: top center;
+    background-repeat: no-repeat;
 }
 
 .header-logo, .footer-logo {
@@ -258,9 +259,12 @@ p:last-child {
 
 @media (max-width: 767px) {
     .header {
-        background-image: url("../images/football_767.jpg");
         padding-top: 3.3rem;
         padding-bottom: 8.4rem;
+    }
+
+    .header:before {
+        background-image: url("../images/football_767.jpg");
     }
 
     .header-logo {
@@ -270,9 +274,12 @@ p:last-child {
 
 @media (min-width: 768px) and (max-width: 960px) {
     .header {
-        background-image: url("../images/football_1280.jpg");
         padding-top: 4rem;
         padding-bottom: 8.8rem;
+    }
+
+    .header:before {
+        background-image: url("../images/football_1280.jpg");
     }
 
     .header-logo {
@@ -283,9 +290,12 @@ p:last-child {
 
 @media (min-width: 961px) {
     .header {
-        background-image: url("../images/football_1920.jpg");
         padding-top: 4.5rem;
         padding-bottom: 10.5rem;
+    }
+
+    .header:before {
+        background-image: url("../images/football_1920.jpg");
     }
 
     .header-logo {
@@ -306,10 +316,6 @@ p:last-child {
         margin-left: auto;
         margin-right: auto;
     }
-}
-
-.header-container {
-    position: relative;
 }
 
 @media (max-width: 960px) {
@@ -935,23 +941,24 @@ p:last-child {
 
 .footer {
     background-color: #0a0e34;
-    background-size: cover;
-    background-position: top center;
-    background-repeat: no-repeat;
     position: relative;
     color: #ffffff;
+    z-index: -1;
 }
 
 .footer:before {
     content: "";
     width: 100%;
     height: 100%;
-    background-color: #0a0e34;
-    opacity: .9;
+    opacity: .1;
     position: absolute;
     top: 0;
     left: 0;
-    z-index: 0;
+    z-index: -1;
+
+    background-size: cover;
+    background-position: top center;
+    background-repeat: no-repeat;
 }
 
 .footer-container {
@@ -983,9 +990,12 @@ p:last-child {
 
 @media (max-width: 767px) {
     .footer {
-        background-image: url("../images/game_767.jpg");
         padding-top: 9.7rem;
         padding-bottom: .6rem;
+    }
+
+    .footer:before{
+        background-image: url("../images/game_767.jpg");
     }
 
     .download-logo {
@@ -1026,9 +1036,12 @@ p:last-child {
 
 @media (min-width: 768px) and (max-width: 960px) {
     .footer {
-        background-image: url("../images/game_1280.jpg");
         padding-top: 12.2rem;
         padding-bottom: 2rem;
+    }
+
+    .footer:before{
+        background-image: url("../images/game_1280.jpg");
     }
 
     .download-logo {
@@ -1072,9 +1085,12 @@ p:last-child {
 
 @media (min-width: 961px) {
     .footer {
-        background-image: url("../images/game_1920.jpg");
         padding-top: 22rem;
         padding-bottom: 4.6rem;
+    }
+
+    .footer:before{
+        background-image: url("../images/game_1920.jpg");
     }
 
     .download-app {
